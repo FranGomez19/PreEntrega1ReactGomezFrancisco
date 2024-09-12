@@ -1,6 +1,7 @@
 import './App.css'
-import ItemListContainer from './components/ItemListContainer.jsx';
-import NavBar from './components/NavBar.jsx';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer'
+import NavBar from './components/NavBar/NavBar'
+
 
 function App() {
 
@@ -8,8 +9,13 @@ function App() {
     <>
       <header>
         <NavBar/>
-        <ItemListContainer/>
       </header>
+      <main>
+        <ItemListContainer greeting="pagina tipica que vende camisetas de futbol god"/>
+      </main>
+      <footer>
+        
+      </footer>
     </>
   )
 }

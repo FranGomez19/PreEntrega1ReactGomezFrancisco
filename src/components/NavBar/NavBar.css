@@ -1,0 +1,44 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: #3a3a3a; 
+    color: #fff;
+  }
+  
+  nav img {
+    width: 90px; 
+    height: auto;
+    margin-left: 0;
+  }
+  
+  nav .nav-buttons {
+    display: flex;
+    gap: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); 
+  }
+  
+  nav button {
+    padding: 10px 15px;
+    font-size: 14px;
+    background-color: #555;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  nav button:hover {
+    background-color: #777;
+  }
+  
+  
+  .cart-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 0; 
+  }
