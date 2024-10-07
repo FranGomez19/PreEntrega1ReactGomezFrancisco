@@ -10,14 +10,16 @@ export default function ItemListContainer() {
 
     const {categoryId} = useParams()
     
-useEffect(()=>{
-    if(categoryId){
-        const filteredPrendasDeportivas = getCategory(categoryId);
-        setPrendasDeportivas(filteredPrendasDeportivas);
-    }else{
-        getProducts.then((data)=> setPrendasDeportivas(data));
-    }
-},[categoryId])
+    useEffect(() => {
+        if (categoryId) {
+            getProducts.then((data) => {
+                const filteredPrendasDeportivas = data.filter(prendaDeportiva => prendaDeportiva.category === categoryId);
+                setPrendasDeportivas(filteredPrendasDeportivas);
+            });
+        } else {
+            getProducts.then((data) => setPrendasDeportivas(data));
+        }
+    }, [categoryId]);
     return (
         <>
             <section>
