@@ -1,15 +1,35 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom"
-import { getProduct } from "../../asyncMock";
+import { CartContext } from "../../context/CartContext";
+import ItemCount from "../ItemCount/ItemCount.jsx";
+import { Link } from 'react-router-dom';
+import { getSingleProduct } from "../../firebase.js";
 
 
 export default function ItemDetailContainer() {
+    const[quantityAded, setQuantityAded] = useState(0);
+
+    const [cart, addProduct] = useContext(CartContext);
+
+    const handleOnAdd = (quantity) =>{
+        setQuantityAded(quantity)
+
+        const product = {
+            id: prendaDeportiva.id, 
+            nombre: prendaDeportiva.nombre, 
+            precio: prendaDeportiva.precio
+        };
+
+        addProduct(product, quantity)
+    }
+
+
     const [prendaDeportiva, setPrendaDeportiva] = useState({})
     
     const{id} = useParams();
 
     useEffect(()=>{
-        setPrendaDeportiva(getProduct(id))
+        getSingleProduct(id).then((response)=>setPrendaDeportiva(response))
     },[])
 
     return (
@@ -20,6 +40,15 @@ export default function ItemDetailContainer() {
                 <p>${prendaDeportiva.precio}</p>
                 <p>{prendaDeportiva.descripcion}</p>
                 <p>{prendaDeportiva.category}</p>
+                <section>
+                    {
+                        quantityAded > 0 ?(
+                            <Link to="/cart" className="option">Terminar Compra</Link>
+                        ) : (
+                            <ItemCount initial={1} stock={prendaDeportiva.stock} onAdd={handleOnAdd}/>
+                        )
+                    }
+                </section>
             </article>
         </>
     )
