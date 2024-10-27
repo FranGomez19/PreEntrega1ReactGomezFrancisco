@@ -3,9 +3,10 @@ import "./Cart.css";
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 import CartItem from "../CartItem/CartItem";
+import "./Cart.css"
 
 export default function Cart() {
-    const [cart, , , clearCart, total] = useContext(CartContext);
+    const {cart, addProduct, removeProduct, clearCart, isInCart, total, cantidadTotal} = useContext(CartContext);
 
     if (cart.length === 0) {
         return (
@@ -17,16 +18,15 @@ export default function Cart() {
     }
 
     return (
-        <>
-            <div>
-                {cart.map(p => {
-                    console.log('Producto en carrito:', p);
-                    <CartItem key={p.id} producto={p} />
-                })}
-                <h3>Total: ${total || 0}</h3>
-                <button onClick={() => clearCart()}>Limpiar carrito</button>
-                <Link to="/checkout">Checkout</Link>
+        <div>
+            {cart.map((producto) => (
+                <CartItem key={producto.id} producto={producto} />
+            ))}
+            <div className="cart-footer">
+            <h3>Total: ${total || 0}</h3>
+            <Link to="/checkout">Finalizar Compra</Link>
+            <button onClick={clearCart}>Limpiar carrito</button>
             </div>
-        </>
+        </div>
     );
 }

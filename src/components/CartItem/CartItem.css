@@ -1,0 +1,27 @@
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Estilos para cada propiedad (nombre, cantidad, etc.) */
+.cart-item h4, .cart-item h5, .cart-item button {
+    margin: 0 10px;
+    text-align: center;
+}
+
+/* Estilo para el botón de eliminar */
+.cart-item button {
+    padding: 5px 10px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.cart-item button:hover {
+    background-color: #d32f2f;
+}

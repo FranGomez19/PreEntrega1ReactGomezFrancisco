@@ -1,0 +1,35 @@
+.cart-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.cart-footer h3 {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.cart-footer button {
+    padding: 5px 15px;
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.cart-footer button:hover {
+    background-color: #1565c0;
+}
+
+/* Ajuste para el enlace de checkout */
+.cart-footer a {
+    color: #1976d2;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.cart-footer a:hover {
+    text-decoration: underline;
+}

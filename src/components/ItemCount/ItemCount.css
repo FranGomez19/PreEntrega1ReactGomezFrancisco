@@ -1,0 +1,42 @@
+.item-count {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.item-count button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 0 5px; /* Espacio entre botones y cantidad */
+}
+
+.item-count button:hover {
+    background-color: #0056b3;
+}
+
+.item-count h4 {
+    margin: 0 10px;
+    font-size: 1.2em;
+}
+
+/* Botón de agregar al carrito */
+.item-count .add-to-cart {
+    background-color: #18169b;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.item-count .add-to-cart:hover {
+    background-color: #22bcc7;
+}
