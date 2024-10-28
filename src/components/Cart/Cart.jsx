@@ -6,11 +6,11 @@ import CartItem from "../CartItem/CartItem";
 import "./Cart.css"
 
 export default function Cart() {
-    const {cart, addProduct, removeProduct, clearCart, isInCart, total, cantidadTotal} = useContext(CartContext);
+    const {cart, clearCart, total} = useContext(CartContext);
 
     if (cart.length === 0) {
         return (
-            <div>
+            <div className="noProductos">
                 <h1>No hay productos en el carrito</h1>
                 <Link to="/">Ver productos</Link>
             </div>

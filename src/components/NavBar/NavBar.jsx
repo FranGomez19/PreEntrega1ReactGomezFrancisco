@@ -7,7 +7,7 @@ export default function NavBar() {
     return (
         <>
             <nav>
-                <Link to={'/'}><img src="/img/logoreact-fotor-bg-remover-20240911205144.png" alt="logo" /></Link>
+                <Link to={'/'}><img src="https://i.postimg.cc/xC47KFXb/logoreact-fotor-bg-remover-20240911205144.png" alt="logo" /></Link>
                 <div className="nav-buttons">
                     <button><Link to={'/category/actual'}>Actual</Link></button>
                     <button><Link to={'/category/retro'}>Retro</Link></button>

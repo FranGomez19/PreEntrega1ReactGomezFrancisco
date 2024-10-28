@@ -1,44 +1,40 @@
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 30px;
-    background-color: #3a3a3a; 
-    color: #fff;
-  }
-  
-  nav img {
-    width: 90px; 
-    height: auto;
-    margin-left: 0;
-  }
-  
-  nav .nav-buttons {
-    display: flex;
-    gap: 20px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%); 
-  }
-  
-  nav button {
-    padding: 10px 15px;
-    font-size: 14px;
-    background-color: #555;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  nav button:hover {
-    background-color: #777;
-  }
-  
-  
-  .cart-container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-right: 0; 
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333; /* Fondo oscuro */
+}
+
+nav a {
+  text-decoration: none; /* Eliminar subrayado */
+  color: white; /* Cambiar color del texto */
+  font-weight: bold;
+  transition: color 0.3s; /* Transición suave para cambio de color */
+}
+
+nav a:hover {
+  color: #c0c0c0; /* Color en hover */
+}
+
+.nav-buttons button {
+  background: transparent;
+  border: none;
+  margin: 0 10px;
+}
+
+.nav-buttons button a {
+  padding: 5px 15px;
+  background-color: #5a2a82; /* Fondo para los enlaces */
+  border-radius: 5px;
+  color: white;
+}
+
+.nav-buttons button a:hover {
+  background-color: #7946b1;
+}
+nav img {
+  width: 90px; 
+  height: auto;
+  margin-left: 0;
+}

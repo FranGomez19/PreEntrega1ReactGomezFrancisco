@@ -12,7 +12,7 @@ export default function CartItem({ producto }) {
             <h4>{nombre || 'Nombre no disponible'}</h4>
             <h5>Cantidad: {quantity || 0}</h5>
             <h5>Precio por unidad: ${precio || 0}</h5>
-            <h5>Total: ${quantity * precio || 0}</h5>
+            <h5>Todas: ${quantity * precio || 0}</h5>
             <button onClick={() => removeProduct(id)}>Eliminar</button>
         </article>
     );

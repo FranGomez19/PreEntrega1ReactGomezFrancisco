@@ -33,3 +33,32 @@
 .cart-footer a:hover {
     text-decoration: underline;
 }
+.noProductos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60vh; /* Altura para centrar el contenido verticalmente */
+    text-align: center;
+    color: #333;
+}
+
+.noProductos h1 {
+    font-size: 2em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.noProductos a {
+    text-decoration: none;
+    color: white;
+    background-color: #5a2a82;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.noProductos a:hover {
+    background-color: #7946b1;
+}
